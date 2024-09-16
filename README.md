@@ -44,21 +44,6 @@ O programa segue as seguintes regras para o cálculo de impostos:
 
 5. **Prejuízos não geram imposto**: Quando há prejuízo em uma venda, o imposto não é cobrado, e o prejuízo é utilizado para deduzir lucros futuros.
 
-## Exemplo de Uso
-
-### Entrada
-Cada linha de entrada representa uma lista de operações no formato JSON. Por exemplo:
-
-```json
-[{"operation":"buy", "unit-cost":10.00, "quantity": 10000},{"operation":"sell", "unit-cost":20.00, "quantity": 5000},{"operation":"sell", "unit-cost":5.00, "quantity": 5000}]
-```
-
-### Saída
-A saída é uma lista de objetos JSON, contendo o imposto calculado para cada operação de venda. Exemplo de saída para o exemplo acima:
-
-```json
-[{"tax":0.00},{"tax":10000.00},{"tax":0.00}]
-```
 
 ## Como Rodar o Projeto
 
@@ -113,6 +98,22 @@ O programa retorna uma lista de objetos JSON contendo o valor do imposto pago po
 ```json
 [{"tax": 0.00}, {"tax": 10000.00}]
 ```
+
+## Exemplo de Uso
+
+### Entrada
+Cada linha de entrada representa uma lista de operações no formato JSON. Por exemplo:
+
+```json
+[{"operation":"buy", "unit-cost":10.00, "quantity": 10000},{"operation":"sell", "unit-cost":20.00, "quantity": 5000},{"operation":"sell", "unit-cost":5.00, "quantity": 5000}]
+```
+
+### Saída
+A saída é uma lista de objetos JSON, contendo o imposto calculado para cada operação de venda. Exemplo de saída para o exemplo acima:
+
+```json
+[{"tax":0.00},{"tax":10000.00},{"tax":0.00}]
+```   
 
 ## Testes Unitários
 
